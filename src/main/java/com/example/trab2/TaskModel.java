@@ -1,23 +1,29 @@
 package com.example.trab2;
 
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.io.Serializable;
 
 public class TaskModel implements Serializable {
-    int id;
-    String title;
-    String description;
+    private String id;
+    private String title;
+    private String description;
 
-    public TaskModel(int id, String title, String description) {
+    public TaskModel(){}
+
+    public TaskModel(String id, String title, String description) {
         this.id = id;
         this.title = title;
         this.description = description;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
